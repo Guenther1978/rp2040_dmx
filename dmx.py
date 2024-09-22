@@ -1,7 +1,8 @@
-from pyb import UART, Pin, udelay
+from machine import UART, Pin
+from time import sleep_us as udelay
 from array import array
 
-tx_pins = [None, 'X9', 'X3', 'Y9', 'X1', None, 'Y1']
+tx_pins = [0, 4]
 
 class universe():
     def __init__(self, port):
@@ -32,7 +33,7 @@ class universe():
         """
         # DMX needs a 88us low to begin a frame,
         # 77uS us used because of time it takes to init pin
-        dmx_uart = Pin(tx_pins[self.port], Pin.OUT_PP)
+        dmx_uart = Pin(tx_pins[self.port], Pin.OUT)
         dmx_uart.value(0)
         udelay(74)
         dmx_uart.value(1)
