@@ -1,1 +1,2 @@
 *.pyb
+__pycache__/
