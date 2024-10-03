@@ -1,7 +1,6 @@
+# LED class
+
 import random
-import time
-import dmx
-dmx1 = dmx.universe(1)
 
 ADDRESS_RED = 8
 ADDRESS_GREEN = ADDRESS_RED + 1
@@ -28,35 +27,42 @@ class Led():
         self.new_min_at_max = False
         self._is_at_max = False
         self._is_at_max = False
-        self.wait_at_max = True
-        self.wait_at_min = True
+        self.wait_at_max = False
+        self.wait_at_min = False
         
     def increase_intensity(self):
         self.intensity = self.intensity + 1
         if self.intensity >= self.intensity_max:
             self.darker = True
             self._is_at_max = True
-            self._is_at_min = False
+            if self.new_duration == True:
+                self.duration = 1 + int(random.random() * 7)
             if self.wait_at_max == True:
                 self.changeable = False
+        else:
+            self._is_at_max = False
+            self._is_at_min = False
 
     def decrease_intensity(self):
         self.intensity = self.intensity - 1
         if self.intensity <= self.intensity_min:
             self.darker = False
-            self._is_at_max = False
             self._is_at_min = True
+            if self.new_duration == True:
+                self.duration = 1 + int(random.random() * 7)
             if self.wait_at_min == True:
                 self.changeable = False
+        else:
+            self._is_at_max = False
+            self._is_at_min = False
 
     def change_intensity(self):
         if self.changeable:
             self.counter = self.counter - 1
             if self.counter == 0:
-                if self.new_duration == True:
-                    self.duration = 1 + int(random.random() * 7)
+                self.counter = self.duration
                 if self.darker == True:
-                    decrease_intensity()
+                    self.decrease_intensity()
                 else:
-                    increase_intensity()
-    
+                    self.increase_intensity()
+
