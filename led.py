@@ -42,6 +42,10 @@ class Led():
                 self.duration = 1 + int(random.random() * 7)
             if self.wait_at_max == True:
                 self.changeable = False
+            if self.new_min_at_max == True:
+                value = int(random.random() * 255)
+                if value < self.intensity and value >= self.intensity_limit_min:
+                    self.intensity_min = value
         else:
             self._is_at_max = False
             self._is_at_min = False
@@ -55,6 +59,10 @@ class Led():
                 self.duration = 1 + int(random.random() * 7)
             if self.wait_at_min == True:
                 self.changeable = False
+            if self.new_max_at_min == True:
+                value = int(random.random() * 255)
+                if value > self.intensity and value <= self.intensity_limit_max:
+                    self.intensity_max = value
         else:
             self._is_at_max = False
             self._is_at_min = False
