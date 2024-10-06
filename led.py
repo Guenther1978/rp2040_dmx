@@ -93,6 +93,47 @@ class Led():
                 else:
                     self.intensity = self.intensity + 1
 
+    def logger(self):
+        print("\nAdresses:")
+        print(self.address)
+        print("\nChangeable:")
+        print(self.changeable)
+        print("\nCounter:")
+        print(self.counter)
+        print("\nDarker:")
+        print(self.darker)
+        print("\nDuration:")
+        print(self.duration)
+        print("\nInitialized:")
+        print(self.initialized)
+        print("\nIntensity:")
+        print(self.intensity)
+        print("\nLimit max:")
+        print(self.intensity_limit_max)
+        print("\nLimit min:")
+        print(self.intensity_limit_min)
+        print("\nMax:")
+        print(self.intensity_max)
+        print("\nMin:")
+        print(self.intensity_min)
+        print("\nnew Duration:")
+        print(self.new_duration)
+        print("\nnew max at min:")
+        print(self.new_max_at_min)
+        print("\nnew min at max:")
+        print(self.new_min_at_max)
+        print("\nOn:")
+        print(self.on)
+        print("\nis at max:")
+        print(self._is_at_max)
+        print("\nis at min:")
+        print(self._is_at_min)
+        print("\nwait at max:")
+        print(self.wait_at_max)
+        print("\nwait at min:")
+        print(self.wait_at_min)
+
+
 class Rgb():
 
     def __init__(self, address_red, address_green, address_blue):
@@ -105,7 +146,7 @@ class Rgb():
         print("\nAdresses:")
         for i in self.list_leds:
             print(i.address)
-        print("\nInitialized:")
+        print("\nChangeable:")
         for i in self.list_leds:
             print(i.changeable)
         print("\nCounter:")
