@@ -29,7 +29,7 @@ class Led():
         self.new_min_at_max = False
         self.on = True
         self._is_at_max = False
-        self._is_at_max = False
+        self._is_at_min = False
         self.wait_at_max = False
         self.wait_at_min = False
         
@@ -101,3 +101,62 @@ class Rgb():
         self.list_leds.append(Led(address_green))
         self.list_leds.append(Led(address_blue))
         
+    def logger(self):
+        print("Adresses:")
+        for i in self.list_leds:
+            print(self.i.address)
+        print("Initialized:")
+        for i in self.list_leds:
+            print(self.i.changeable)
+        print("Counter:")
+        for i in self.list_leds:
+            print(self.i.counter)
+        print("Darker:")
+        for i in self.list_leds:
+            print(self.i.darker)
+        print("Duration:")
+        for i in self.list_leds:
+            print(self.i.duration)
+        print("Initialized:")
+        for i in self.list_leds:
+            print(self.i.initialized)
+        print("Intensity:")
+        for i in self.list_leds:
+            print(self.i.intensity)
+        print("Limit max:")
+        for i in self.list_leds:
+            print(self.i.intensity_limit_max)
+        print("Limit min:")
+        for i in self.list_leds:
+            print(self.i.intensity_limit_min)
+        print("Max:")
+        for i in self.list_leds:
+            print(self.i.intensity_max)
+        print("Min:")
+        for i in self.list_leds:
+            print(self.i.intensity_min)
+        print("new Duration:")
+        for i in self.list_leds:
+            print(self.i.new_duration)
+        print("new max at min:")
+        for i in self.list_leds:
+            print(self.i.new_max_at_min)
+        print("new min at max:")
+        for i in self.list_leds:
+            print(self.i.new_min_at_max)
+        print("On:")
+        for i in self.list_leds:
+            print(self.i.on)
+        print("is at max:")
+        for i in self.list_leds:
+            print(self.i._is_at_max)
+        print("is at min:")
+        for i in self.list_leds:
+            print(self.i._is_at_min)
+        print("wait at max:")
+        for i in self.list_leds:
+            print(self.i.wait_at_max)
+        print("wait at min:")
+        for i in self.list_leds:
+            print(self.i.wait_at_min)
+
