@@ -21,7 +21,7 @@ class Led():
         self.initialized = False
         self.intensity = 0
         self.intensity_limit_max = 255
-        self.intensity_linit_min = 1
+        self.intensity_limit_min = 1
         self.intensity_max = 255
         self.intensity_min = 1
         self.new_duration = True
