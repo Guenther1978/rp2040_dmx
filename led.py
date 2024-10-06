@@ -102,61 +102,61 @@ class Rgb():
         self.list_leds.append(Led(address_blue))
         
     def logger(self):
-        print("Adresses:")
+        print("\nAdresses:")
         for i in self.list_leds:
-            print(self.i.address)
-        print("Initialized:")
+            print(i.address)
+        print("\nInitialized:")
         for i in self.list_leds:
-            print(self.i.changeable)
-        print("Counter:")
+            print(i.changeable)
+        print("\nCounter:")
         for i in self.list_leds:
-            print(self.i.counter)
-        print("Darker:")
+            print(i.counter)
+        print("\nDarker:")
         for i in self.list_leds:
-            print(self.i.darker)
-        print("Duration:")
+            print(i.darker)
+        print("\nDuration:")
         for i in self.list_leds:
-            print(self.i.duration)
-        print("Initialized:")
+            print(i.duration)
+        print("\nInitialized:")
         for i in self.list_leds:
-            print(self.i.initialized)
-        print("Intensity:")
+            print(i.initialized)
+        print("\nIntensity:")
         for i in self.list_leds:
-            print(self.i.intensity)
-        print("Limit max:")
+            print(i.intensity)
+        print("\nLimit max:")
         for i in self.list_leds:
-            print(self.i.intensity_limit_max)
-        print("Limit min:")
+            print(i.intensity_limit_max)
+        print("\nLimit min:")
         for i in self.list_leds:
-            print(self.i.intensity_limit_min)
-        print("Max:")
+            print(i.intensity_limit_min)
+        print("\nMax:")
         for i in self.list_leds:
-            print(self.i.intensity_max)
-        print("Min:")
+            print(i.intensity_max)
+        print("\nMin:")
         for i in self.list_leds:
-            print(self.i.intensity_min)
-        print("new Duration:")
+            print(i.intensity_min)
+        print("\nnew Duration:")
         for i in self.list_leds:
-            print(self.i.new_duration)
-        print("new max at min:")
+            print(i.new_duration)
+        print("\nnew max at min:")
         for i in self.list_leds:
-            print(self.i.new_max_at_min)
-        print("new min at max:")
+            print(i.new_max_at_min)
+        print("\nnew min at max:")
         for i in self.list_leds:
-            print(self.i.new_min_at_max)
-        print("On:")
+            print(i.new_min_at_max)
+        print("\nOn:")
         for i in self.list_leds:
-            print(self.i.on)
-        print("is at max:")
+            print(i.on)
+        print("\nis at max:")
         for i in self.list_leds:
-            print(self.i._is_at_max)
-        print("is at min:")
+            print(i._is_at_max)
+        print("\nis at min:")
         for i in self.list_leds:
-            print(self.i._is_at_min)
-        print("wait at max:")
+            print(i._is_at_min)
+        print("\nwait at max:")
         for i in self.list_leds:
-            print(self.i.wait_at_max)
-        print("wait at min:")
+            print(i.wait_at_max)
+        print("\nwait at min:")
         for i in self.list_leds:
-            print(self.i.wait_at_min)
+            print(i.wait_at_min)
 
